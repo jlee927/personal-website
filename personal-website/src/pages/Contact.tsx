@@ -41,8 +41,8 @@ const Contact: React.FC = () => {
               <a href="https://github.com/jlee927">
                 <img src={linkedin} className={styles.github} />
               </a>
-
               <Mailto email={"jklee882@gmail.com"} subject={"Reaching Out From Jin's Personal Website"} body={""} />
+
             </div>
           </motion.div>
           <ParticleBackground2 />
