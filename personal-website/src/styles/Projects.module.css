@@ -1,0 +1,43 @@
+.projects {
+  height: 100vh;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  color: white;
+  padding: 2em 0 0 0;
+  z-index: 2;
+}
+
+.project_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 6em 0 0 0;
+}
+
+.title {
+  text-decoration: underline;
+}
+
+.project_description {
+  width: 42em;
+}
+
+.project_preview {
+  margin: 4em 0 0 0;
+  width: 42em;
+}
+
+.project_image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: 0.5em;
+  background: white;
+  padding: 1em;
+}

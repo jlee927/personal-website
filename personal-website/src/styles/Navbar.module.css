@@ -1,0 +1,80 @@
+.container {
+  border: none;
+  font-size: 1rem;
+  font-weight: 100;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: transparent;
+  width: 100%;
+  height: 6em;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.sticky {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+  background-color: #201314;
+}
+
+.left_content {
+  display: flex;
+  margin: 0 0 0 2em;
+}
+
+.right_content {
+  font-size: 0.8rem;
+  display: flex;
+  margin: 0 8em 0 0;
+  gap: 2em;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.links::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: grey;
+  /* Customize gradient */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+/* Hover effect for links */
+.links:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Active link grey underline (no hover animation) */
+.active_link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: grey;
+  transform: scaleX(1);
+  /* Make sure it's always visible for active link */
+  transform-origin: bottom left;
+}
