@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar.tsx'
-import ParticleBackground2 from '../components/ParticleBackground.jsx'
+import ParticleBackground2 from '../components/ParticleBackground2.jsx'
 import { motion } from "framer-motion"
 import styles from '../styles/Projects.module.css'
 import mern from '../assets/fetch.png'
@@ -9,7 +9,7 @@ const Projects: React.FC = () => {
     <div className={styles.project} >
       <Navbar showNavbar={true} useSticky={1} />
 
-      <section className={styles.container}>
+      <div className={styles.container}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,8 +33,8 @@ const Projects: React.FC = () => {
           </div>
         </motion.div>
 
-      </section>
-      <ParticleBackground2 />
+        <ParticleBackground2 />
+      </div>
     </div >
   )
 }
