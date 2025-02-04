@@ -2,7 +2,6 @@ import Navbar from '../components/Navbar.tsx'
 import ParticleBackground2 from '../components/ParticleBackground.jsx'
 import { motion } from "framer-motion"
 import styles from '../styles/Projects.module.css'
-import ComputerIcon from '../assets/desktop-computer.png'
 import mern from '../assets/fetch.png'
 
 const Projects: React.FC = () => {

@@ -1,6 +1,7 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import type { Container } from "@tsparticles/engine"; // Import Container type
 
 const ParticleBackground = () => {
   const [init, setInit] = useState(false);
@@ -14,19 +15,22 @@ const ParticleBackground = () => {
     });
   }, []);
 
-  const particlesLoaded = (container) => {
-    console.log(container);
+  // Ensure correct typing for particlesLoaded function
+  const particlesLoaded = async (container?: Container) => {
+    if (container) {
+      console.log(container);
+    }
   };
 
   return (
     <div
       style={{
-        position: "absolute",  // This makes the particles background cover the section
+        position: "absolute",
         top: 0,
         left: 0,
-        width: "100%",         // Full width of the parent container
-        height: "100%",        // Full height of the parent container
-        zIndex: -1,            // Ensure the particles stay in the background
+        width: "100%",
+        height: "100%",
+        zIndex: -1,
       }}
     >
       {init && (
@@ -40,7 +44,7 @@ const ParticleBackground = () => {
               },
             },
             fullScreen: {
-              enable: false, // Disable fullscreen to respect the parent container size
+              enable: false,
               zIndex: -1,
             },
             fpsLimit: 120,
@@ -54,7 +58,7 @@ const ParticleBackground = () => {
                   enable: true,
                   mode: "repulse",
                 },
-                resize: true,
+                resize: { enable: true }, // Corrected type
               },
               modes: {
                 push: {
@@ -90,7 +94,6 @@ const ParticleBackground = () => {
               number: {
                 density: {
                   enable: true,
-                  area: 800,
                 },
                 value: 100,
               },

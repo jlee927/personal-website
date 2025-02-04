@@ -1,6 +1,7 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import type { Container } from "@tsparticles/engine";
 
 const ParticleBackground2 = () => {
   const [init, setInit] = useState(false);
@@ -14,8 +15,9 @@ const ParticleBackground2 = () => {
     });
   }, []);
 
-  const particlesLoaded = (container) => {
+  const particlesLoaded = async (container?: Container): Promise<void> => {
     console.log(container);
+    return Promise.resolve();
   };
 
   return (
@@ -45,7 +47,7 @@ const ParticleBackground2 = () => {
                   enable: false,
                   mode: "repulse",
                 },
-                resize: true,
+                resize: { enable: true },
               },
               modes: {
                 push: {
@@ -74,7 +76,7 @@ const ParticleBackground2 = () => {
               number: {
                 density: {
                   enable: true,
-                  area: 800,
+                  width: 800, // Corrected from 'area' to 'width'
                 },
                 value: 80,
               },
@@ -97,5 +99,4 @@ const ParticleBackground2 = () => {
 };
 
 export default ParticleBackground2;
-
 

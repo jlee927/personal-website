@@ -10,7 +10,6 @@ interface Props {
   email: string
   subject: string
   body: string
-  children: string
 }
 
 const Mailto: React.FC<Props> = ({ email, subject, body }) => {
