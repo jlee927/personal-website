@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
                 <img src={github} className={styles.github} />
               </a>
 
-              <a href="https://github.com/jlee927">
+              <a href="https://www.linkedin.com/in/jin-kyo-lee/">
                 <img src={linkedin} className={styles.github} />
               </a>
               <Mailto email={"jklee882@gmail.com"} subject={"Reaching Out From Jin's Personal Website"} body={""} />
