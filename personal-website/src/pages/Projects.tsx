@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
               <br />
               <p style={{ color: "pink" }}>
                 Interview Diver is an AI-powered interview practice platform that helps users improve their interviewing skills through
-                real-time voice input and AI-generated feedback. The projects frontend was created using React TypeScript frontend, while the
+                real-time voice input and AI-generated feedback. The projects frontend was created using React TypeScript, while the
                 backend was created with Flask and SQL. Postgres stores user data and processes responses using OpenAI. Users can customize their practice sessions by selecting profession, difficulty,
                 number of questions, and experience level
               </p>
